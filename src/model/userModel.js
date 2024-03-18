@@ -7,8 +7,7 @@ const userModel = mongoose.Schema({
         required: true,
     },
     Role: {
-        type: String,
-        required: true,
+       type: String, enum: ['super moderator', 'moderator']
     },
     Email: {
         type: String,
@@ -34,4 +33,3 @@ const userModel = mongoose.Schema({
 userModel.set("timestamps", true);
 
 module.exports = mongoose.model("users", userModel);
-

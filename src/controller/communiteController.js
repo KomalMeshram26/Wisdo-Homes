@@ -1,19 +1,19 @@
-const userModel = require("../model/userModel");
+const communitieModel = require("../model/communityModel");
 const mongoose = require('mongoose');
 
 
 /*
 Api Type : POST
-Api Name : create-user
+Api Name : add-community
 */
 
-let createUser = async (req, res) => {
-  const user = new userModel(req.body);
+let addCommunity = async (req, res) => {
+  const community = new communitieModel(req.body);
   try {
-    const data = await user.save();
+    const data = await community.save();
     res.status(201).json({
       success: true,
-      message: "User registerd sucessfully",
+      message: "Community add sucessfully",
       user: data,
     });
   } catch (error) {
@@ -25,5 +25,5 @@ let createUser = async (req, res) => {
 };
 
 module.exports = {
-  createUser
+  addCommunity
 }

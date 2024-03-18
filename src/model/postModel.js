@@ -3,8 +3,9 @@ const mongoose = require("mongoose");
 const postModel = mongoose.Schema({
 
     Title: {
-        type: String,
-        required: true,
+        type: String, 
+        required: true, 
+        maxlength: 60
     },
     Summary: {
         type: String,
@@ -27,12 +28,12 @@ const postModel = mongoose.Schema({
         required: true,
     },
     Likes: {
-        type: String,
-        required: true,
+        type: Number, 
+        default: 0 
     },
     Status: {
-        type: String,
-        required: true,
+        type: String, enum: ['Pending approval', 'Approved'], 
+        default: 'Pending approval'
     },
     isActive: {
         type: String,
