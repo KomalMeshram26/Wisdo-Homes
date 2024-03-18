@@ -1,24 +1,22 @@
 const mongoose = require("mongoose");
 
 const communtiesModel = mongoose.Schema({
-  
-    Title  : {
+
+  Title: {
     type: String,
     required: true,
   },
-  Image  : {
+  Image: {
     type: String,
     required: true,
   },
-  MemberCount  : {
+  MemberCount: {
     type: Number, default: 0
   },
   isActive: {
     type: String,
     default: true,
   },
-
-
 });
 communtiesModel.set("timestamps", true);
 

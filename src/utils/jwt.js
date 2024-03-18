@@ -20,7 +20,7 @@ const jwt = {
             }
         });
     },
-
 }
 
 module.exports = jwt;
+

@@ -22,7 +22,7 @@ const postModel = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true,
     },
-    User:{
+    User: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
     },
@@ -38,8 +38,6 @@ const postModel = mongoose.Schema({
         type: String,
         default: true,
     },
-
-
 });
 postModel.set("timestamps", true);
 
